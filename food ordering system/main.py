@@ -67,9 +67,13 @@ def main():
             for food in menu.food_items:
                 if food.name == food_name:
                     order.add_item(food)
-                    found = True
-                    break
-            if not found:
+                    print("food added ")
+            food_qty=int(input("enter the quantities of items "))
+            for i in range(food_qty):
+                order.add_item(food)
+                found = True
+                break
+        if not found:
                 print("Food not found in the menu.")
 
         elif choice == "3":
@@ -85,7 +89,7 @@ def main():
 
         elif choice == "4":
             total = order.calculate_total()
-            print(f"Total: ${total}")
+            print(f"Total: ${total*food_qty}")
 
         elif choice == "5":
             print("Thank you for using the food ordering system!")
