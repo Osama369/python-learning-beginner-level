@@ -5,10 +5,12 @@ class PasswordHashTable:
     def __init__(self,size):
        self.size=size
        self.table=[[] for _ in range(size)]  # table list 
-      # hash function will create hash code 
+      # hash function will create hash code
+       
     def _hash_function(self, password):
         hashed_password= hashlib.sha256(password.encode()).hexdigest()
         return int(hashed_password[:16], 16) % self.size
+
 
     def insert(self,username,password):
         hashed_password = hashlib.sha256(password.encode()).hexdigest()[:16]
