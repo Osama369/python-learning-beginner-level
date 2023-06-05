@@ -94,7 +94,6 @@ hash_table=HashTable()
 #calling functions
 # hash_table.insert("fahad","fahad123")
 # hash_table.find_all() 
-hash_table.auth("usama","usama123")
 hash_table.close()
 
 
